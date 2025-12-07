@@ -1,0 +1,189 @@
+How the Web Works – Module 3 (My Notes)
+
+What the web actually is:
+It’s basically a huge collection of websites, files and services connected through the internet. Everything works using a client and a server. The client is usually my browser, and the server is where the website is hosted.
+
+Client–Server Model
+
+The client (browser) sends a request.
+
+The server receives it, processes it, and sends something back (HTML, JSON, images, etc).
+
+Typical steps:
+
+I type a URL
+
+Browser sends an HTTP request
+
+Server responds
+
+Browser shows the page
+
+URL Breakdown
+
+Example:
+
+https://example.com/products?id=10#reviews
+
+
+https → protocol
+
+example.com → domain
+
+/products → path
+
+id=10 → query
+
+#reviews → just a page section (not sent to server)
+
+DNS (How domain → IP happens)
+
+When I enter a website:
+
+Browser checks if it already knows the IP
+
+OS cache
+
+My ISP DNS
+
+Root servers
+
+TLD servers (.com, .net)
+
+Authoritative DNS
+Then it gets the IP address and loads the site.
+
+Common DNS records:
+
+A = IPv4
+
+AAAA = IPv6
+
+CNAME = alias
+
+MX = mail servers
+
+TXT = text info (SPF, etc.)
+
+HTTP Basics
+
+HTTP = how clients and servers talk.
+
+Two versions:
+
+HTTP (not encrypted)
+
+HTTPS (encrypted with TLS)
+
+A request has:
+
+method
+
+path
+
+headers
+
+(maybe) body
+
+A response has:
+
+status code
+
+headers
+
+body (HTML, JSON, etc.)
+
+Common HTTP Methods
+
+GET → get something
+
+POST → send data
+
+PUT → update
+
+DELETE → delete
+
+HEAD → only headers
+
+OPTIONS → what methods are allowed
+
+HTTP Status Codes (Important ones)
+
+2xx: success
+
+200 OK
+
+201 Created
+
+3xx: redirection
+
+301 moved
+
+302 temporary redirect
+
+4xx: client mistakes
+
+400 bad request
+
+401 unauthorized
+
+403 forbidden
+
+404 not found
+
+5xx: server mistakes
+
+500 server error
+
+503 unavailable
+
+Cookies, Sessions, Local Storage
+
+Cookies: small data saved in browser (logins, preferences).
+
+Sessions: stored on the server, cookie just holds a session ID.
+
+Local storage: more space, stays until cleared manually.
+
+Web Servers
+
+Some examples: Apache, Nginx, IIS.
+Their job is to handle requests and return the correct files/data.
+
+How Browsers Render a Page
+
+Download HTML
+
+Download CSS
+
+Download JS
+
+Make the DOM
+
+Make CSSOM
+
+Run JS
+
+Show the final webpage
+
+APIs and JSON
+
+Websites often use APIs to get data.
+JSON example:
+
+{
+  "user": "anish",
+  "role": "student"
+}
+
+Basic Web Security Concepts (Beginning)
+
+HTTPS → encryption
+
+XSS → injecting JS into a site
+
+CSRF → tricking a user into doing something
+
+SQL Injection → messing with database queries
+
+CORS → who is allowed to access what

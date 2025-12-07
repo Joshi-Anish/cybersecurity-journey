@@ -1,0 +1,223 @@
+Windows Fundamentals – Module 5 (My Notes)
+What Windows Actually Is
+
+Windows is a graphical operating system used on most personal computers. Unlike Linux (which is mostly terminal-based), Windows relies heavily on the GUI, but it still has powerful command-line tools like Command Prompt and PowerShell.
+
+This module helped me understand the basics of how Windows stores files, how settings work, user management, and some important tools.
+
+Windows File System Basics
+
+Windows mainly uses NTFS (New Technology File System).
+Some important folders:
+
+C:\Windows → system files
+
+C:\Users → all user profiles
+
+C:\Program Files → installed software
+
+C:\Program Files (x86) → 32-bit apps
+
+C:\Temp → temporary files
+
+C:\Users\<username>\Documents → my documents
+
+C:\Users\<username>\AppData → hidden configs for programs
+
+There are three types of AppData:
+
+Local → machine-based data
+
+LocalLow → low integrity apps
+
+Roaming → follows the user profile
+
+Windows Settings vs Control Panel
+
+Windows now has Settings and the old Control Panel.
+
+Settings app:
+
+Modern interface
+
+For everyday things like display, networking, accounts, updates
+
+Control Panel:
+
+The older interface
+
+Has detailed configuration options
+
+Useful areas:
+
+System and Security
+
+User Accounts
+
+Network and Internet
+
+Programs and Features (uninstall apps)
+
+Task Manager
+
+Task Manager is used for looking at:
+
+Running apps
+
+Background processes
+
+Startup programs
+
+Performance (CPU, RAM, disk usage)
+
+Users
+
+Services
+
+Shortcut:
+
+Ctrl + Shift + Esc
+
+
+Or:
+
+Ctrl + Alt + Delete → Task Manager
+
+User Accounts in Windows
+
+Windows has different types of users:
+
+Administrator → full control
+
+Standard User → limited rights
+
+Guest (disabled by default)
+
+Account settings are found at:
+
+Settings → Accounts
+
+
+You can also manage users via:
+
+Control Panel → User Accounts
+
+File Explorer
+
+This is how you browse files.
+
+Some useful things:
+
+Quick Access for recent files
+
+This PC shows all drives
+
+Right-click → Properties = file details
+
+Useful shortcuts:
+
+Win + E → open File Explorer
+
+Alt + ↑ → go up a folder
+
+Windows Command Line Tools
+Command Prompt (cmd)
+
+Basic commands:
+
+dir          (list files)
+cd           (change directory)
+copy         (copy file)
+move         (move file)
+del          (delete file)
+
+PowerShell
+
+More advanced and more powerful.
+
+Examples:
+
+Get-ChildItem     (same as dir)
+Get-Process
+Stop-Process
+Get-Service
+
+System Information Tools
+
+Windows has a bunch of built-in tools to view system details:
+
+System Information (msinfo32)
+
+Shows:
+
+System model
+
+BIOS version
+
+RAM
+
+Drivers
+
+Startup programs
+
+Run:
+
+msinfo32
+
+DirectX Diagnostic Tool
+dxdiag
+
+
+Shows:
+
+Graphics card
+
+Sound
+
+Display drivers
+
+Device Manager
+
+Used to view/manage hardware:
+
+Control Panel → Device Manager
+
+Windows Updates
+
+Windows Update handles:
+
+Security updates
+
+Driver updates
+
+Optional feature updates
+
+Found in:
+
+Settings → Update & Security
+
+Windows Security
+
+Windows Defender is built-in. It includes:
+
+Virus & threat protection
+
+Firewall & network protection
+
+Device security
+
+Event Viewer
+
+A very important tool for security.
+
+It logs everything:
+
+System events
+
+Application events
+
+Security logs (logins, failures, etc.)
+
+Run:
+
+eventvwr.msc

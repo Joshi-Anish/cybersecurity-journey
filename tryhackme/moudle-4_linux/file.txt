@@ -1,0 +1,258 @@
+Linux Fundamentals – Module 4 (My Notes)
+What Linux Actually Is
+
+Linux is an operating system just like Windows, but it’s open-source and mostly used through the terminal. It’s built on the idea that everything is a file. Most servers run Linux because it’s stable, fast and secure.
+
+I mainly interact with Linux using the shell (bash).
+
+Basic File System Layout
+
+Some important folders I learned:
+
+/home → where user files go
+
+/etc → configuration files
+
+/var → logs, updates, changing files
+
+/bin → basic commands (ls, cp, mv, etc)
+
+/usr → installed programs
+
+/tmp → temporary files
+
+/root → root user’s home folder
+
+Navigating Around (Commands)
+
+Some basic commands I used a lot:
+
+pwd → show where I am
+
+ls → list files
+
+cd foldername → move into a folder
+
+cd .. → go back
+
+cd / → go to root directory
+
+cd ~ → go to home folder
+
+List with extra info:
+
+ls -l
+
+
+Show hidden files:
+
+ls -a
+
+Working With Files & Directories
+
+Create a directory:
+
+mkdir folder
+
+
+Create an empty file:
+
+touch file.txt
+
+
+Move/rename:
+
+mv oldname newname
+
+
+Copy:
+
+cp file1 file2
+
+
+Remove:
+
+rm file
+rm -r folder
+
+
+Be careful with rm -r (deletes everything inside).
+
+Viewing File Content
+
+Some commands to read files:
+
+cat file.txt → prints whole file
+
+less file.txt → scroll through file
+
+head file.txt → first 10 lines
+
+tail file.txt → last 10 lines
+
+Using pipe:
+
+cat file.txt | grep "keyword"
+
+
+(Shows only lines containing the keyword)
+
+Editing Files (Nano)
+
+Nano is a simple terminal editor.
+
+Open file:
+
+nano file.txt
+
+
+Inside nano:
+
+Ctrl + O = save
+
+Ctrl + X = exit
+
+Ctrl + K = cut
+
+Ctrl + U = paste
+
+Users & Permissions
+
+Linux uses users, groups, and permissions to control access.
+
+To see file permissions:
+
+ls -l
+
+
+Example:
+
+-rwxr-x--
+
+
+Breakdown:
+
+first letter: file type
+
+next 3: owner
+
+next 3: group
+
+last 3: others
+
+Changing permissions:
+
+chmod 755 file
+
+
+Changing ownership:
+
+chown user:group file
+
+Sudo (Root Permissions)
+
+sudo lets me run commands as the root user.
+
+Example:
+
+sudo apt update
+sudo apt install python3
+
+
+Root user can do anything, so be careful.
+
+Package Management (Debian/Ubuntu)
+
+Linux installs apps via the package manager:
+
+Update list:
+
+sudo apt update
+
+
+Upgrade installed packages:
+
+sudo apt upgrade
+
+
+Install something:
+
+sudo apt install package
+
+
+Remove:
+
+sudo apt remove package
+
+Processes & System Info
+
+Check running processes:
+
+ps aux
+
+
+Kill a process:
+
+kill PID
+
+
+System info:
+
+uname -a
+hostname
+df -h  (disk usage)
+free -h (RAM usage)
+
+Networking Commands
+
+Show IP:
+
+ip a
+
+
+Check connection:
+
+ping google.com
+
+
+Open ports:
+
+ss -tulnp
+
+Using Wildcards
+
+* = anything
+? = single character
+
+Examples:
+
+rm *.txt
+ls project?.py
+
+Finding Files & Searching Inside Files
+
+Search files by name:
+
+find / -name filename.txt 2>/dev/null
+
+
+Search text inside files:
+
+grep "password" file.txt
+
+
+Recursive search:
+
+grep -R "keyword" .
+
+Getting Help
+
+Helpful commands:
+
+man ls
+man grep
+
+
+Or:
+
+ls --help
